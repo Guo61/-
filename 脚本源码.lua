@@ -1,22 +1,27 @@
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/3vQbADjh", true))()
-CoreGui:SetCore("SendNotification", {
-    Title = "Cat脚本",
-    Text = "正在加载（反挂机已开启）",
-    Duration = 6, 
-})
-CoreGui:SetCore("SendNotification", {
-    Title = "Cat脚本",
-    Text = "正在加载（欢迎使用Cat脚本）",
-    Duration = 6, 
-})
 local window = library:new("Cat脚本")
     local creds = window:Tab("关于", "6031097229")
     local bin = creds:section("信息", true)
-    bin:Label("作者Cat")    
-    bin:Label("QQ:3395858053")
+    bin:Label("ByCcat")    
     bin:Label("免费脚本，禁止倒卖")
-    bin:Label("感谢使用")
     bin:Label("欢迎使用")
+    bin:Label("黑名单3395858053(Ccat)")
+    local StarterGui = game:GetService("StarterGui")
+
+StarterGui:SetCore("SendNotification", {
+    Title = "你的通知的标题",
+    Text = "欢迎使用Cat Hub",
+    Icon = "77439056754827",
+    Duration = 8
+})
+local StarterGui = game:GetService("StarterGui")
+
+StarterGui:SetCore("SendNotification", {
+    Title = "Hub",
+    Text = "加载完毕 ",
+    Icon = "77439056754827",
+    Duration = 10
+})
 
     local credits = creds:section("Ul设置", true)
 
@@ -131,58 +136,55 @@ end)
 end)
 
     local creds = window:Tab("脚本区", "6031097229")
-  
     local credits = creds:section("最强战场", true)
 
-credits:Button("英文无限侧翻", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Cat907692/Cat/14a46d9fe32a99b38db472919199398754699419/Cat", true))()
+credits:Button("自动格挡+自瞄", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Cyborg883/TSB/refs/heads/main/CombatGui"))()
 end)
 
-credits:Button("中文最强战场", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
-end)
-
-credits:Button("英文丢垃圾桶", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
+credits:Button("垃圾桶", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/gycgchgyfytdttr/shenqin/refs/heads/main/V1.0.0.txt"))()
 end)
 
 local credits = creds:section("doors", true)
 
-credits:Button("Cat中文doors", function()
+credits:Button("中文doors", function()
    loadstring(game:HttpGet("https://rscripts.net/raw/not-patched-infinite-money-money-farm-open-shop_1753743540999_gqxO4z8nzH.txt"))()
 end)
 
+credits:Button("英文Doors",function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHunterSolo1/Scripts/main/Protected_2809220311826785.lua.txt", true))()
 local credits = creds:section("生存99夜", true)
 
-credits:Button("二狗子", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
+credits:Button("英文99夜", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/yoursvexyyy/VEX-OP/refs/heads/main/99%20nights%20in%20the%20forest"))()
 end)
 
-credits:Button("英文99day", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua"))()
+credits:Button("老外最强99夜", function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/gHQGTNYH"))()
 end)
 
 local credits = creds:section("墨水游戏", true)
 
-credits:Button("AX英文", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
+credits:Button("TX退休", function()
+   --[[请全部复制不会影响执行，包括这句]]TX = "TX退休脚本"Scripts = "森林中的99夜"QUN = "Q群:160369111"loadstring(game:HttpGet("https://raw.githubusercontent.com/JsYb666/Item/refs/heads/main/99-Nights-TX-XIAN-MIAN______-_-_--_-_-_-_--_-_-_-_--_-_-_-_-_--_-_-_-__------_-_-_-_.lua"))()
 end)
 
-credits:Button("Cat超好用英文", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
+credits:Button("老外", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/m00ndiety/99-nights-in-the-forest/refs/heads/main/Main"))()
 end)
 
 local credits = creds:section("死铁轨", true)
+credits:Button("中文", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/iopjklbnmsss/SansHubScript/refs/heads/main/SansHub"))()
+end)
+
+credits:Button("红叶(需卡密)", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Dead-rails/refs/heads/main/Full-GUI'))()
+end)
+
 credits:Button("刷债券", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
-end)
-
-credits:Button("好用刷债券", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
-end)
-
-credits:Button("死铁轨英文", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1"))()
 end)
 
 local credits = creds:section("战争大亨", true)
@@ -222,12 +224,12 @@ end)
 
 local credits = creds:section("被遗弃", true)
 
-credits:Button("英文Cat卡密在群公告", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
+credits:Button("被遗弃", function()
+   loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/ivannetta/ShitScripts/refs/heads/main/forsaken.lua")))()
 end)
 
-credits:Button("NOL", function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/99-Nights-in-the-Forest/refs/heads/main/99%20Nights%20in%20the%20Forest"))()
+credits:Button("中文被遗弃", function()
+   loadstring(utf8.char((function() return table.unpack({108,111,97,100,115,116,114,105,110,103,40,103,97,109,101,58,72,116,116,112,71,101,116,40,34,104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,67,104,105,110,97,81,89,47,45,47,109,97,105,110,47,37,69,54,37,56,51,37,56,53,37,69,52,37,66,65,37,57,49,34,41,41,40,41})end)()))()
 end)
 
    local creds = window:Tab("脚本区", "6031097229")
