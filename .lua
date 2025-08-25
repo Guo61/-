@@ -1,5 +1,6 @@
 local OrionLib = loadstring(game:HttpGet('https://pastebin.com/raw/xLRUSiKx'))()
 local Window = OrionLib:MakeWindow
+
 ({Name = "Cat",
 
 HidePremium = false,
@@ -8,11 +9,13 @@ IntroText = "欢迎使用Cat Hub",
 ConfigFolder = "520"})
 
 local Tab = Window:MakeTab({
+		
 Name = "速度传奇",
 
 Icon = "rbxassetid://108453362719381",	PremiumOnly = false})
 
 Tab:AddButton({
+		
 Name = "钻石",
 
 Callback = function()
