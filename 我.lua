@@ -83,8 +83,8 @@ local Tab = Window:Tab({Title = "Main", Icon = "star"}) do
 
     -- Code Display
     local CodeBlock = Tab:Code({
-        Title = "Example Code",
-        Code = "-- This is a code preview\nprint('Hello world')"
+        Title = "666",
+        Code = "-- This is a code preview\nprint('Ccat')"
     })
 
     -- Simulate update
@@ -101,26 +101,35 @@ local Extra = Window:Tab({Title = "速度传奇", Icon = "tag"}) do
     Extra:Section({Title = "自动"})
     Extra:Button({
         Title = "自动收集钻石",
-        Desc = "点击开启 点击两次关闭",
+        
         Callback = function()
-        while true do
-local args = {
-	"collectOrb",
-	"Gem",
-	"City"
-}
-game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
-wait(0.5)
-end
-
+        -- 切换自动收集状态
+        isCollectingGems = not isCollectingGems
+        
+        -- 关闭之前可能存在的收集线程
+        if collectThread then
+            task.cancel(collectThread)
+            collectThread = nil
+        end
+        
+        if isCollectingGems then
+            -- 开启新的收集线程
+            collectThread = task.spawn(startCollectGems)
             Window:Notify({
                 Title = "通知",
-                Desc = "正在运行!",
+                Desc = "自动收集钻石正在运行!",
+                Time = 3
+            })
+        else
+            Window:Notify({
+                Title = "通知",
+                Desc = "自动收集钻石已停止!",
                 Time = 3
             })
         end
-    })
-end
+    end
+})
+            
 Window:Line()
 local Extra = Window:Tab({Title = "Settings", Icon = "wrench"}) do
     Extra:Section({Title = "Config"})
