@@ -140,6 +140,12 @@ end)
 end)
 
     local creds = window:Tab("脚本区", "6031097229")
+    
+    local Tab = Window:MakeTab({
+    Name = "速度传奇",
+    Icon = "rbxassetid://108453362719381",
+    PremiumOnly = false})
+    
     Tab:AddButton({
 Name = "钻石",
 
