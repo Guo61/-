@@ -103,32 +103,14 @@ local Extra = Window:Tab({Title = "速度传奇", Icon = "tag"}) do
         Title = "自动收集钻石",
         Desc = "自动收集钻石"
         Callback = function()
-        -- 切换自动收集状态
-        isCollectingGems = not isCollectingGems
-        
-        -- 关闭之前可能存在的收集线程
-        if collectThread then
-            task.cancel(collectThread)
-            collectThread = nil
+             Window:Notify({
+               Title = "通知"
+               Desc = "正在运行"
+                 Time = 3
+             })
         end
-        
-        if isCollectingGems then
-            -- 开启新的收集线程
-            collectThread = task.spawn(startCollectGems)
-            Window:Notify({
-                Title = "通知",
-                Desc = "自动收集钻石正在运行!",
-                Time = 3
-            })
-        else
-            Window:Notify({
-                Title = "通知",
-                Desc = "自动收集钻石已停止!",
-                Time = 3
-            })
-        end
-    end
-})
+    })
+  end
             
 Window:Line()
 local Extra = Window:Tab({Title = "Settings", Icon = "wrench"}) do
