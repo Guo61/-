@@ -9,7 +9,7 @@ local Window = Library:Window({
     Title = "Cat Hub",
     Desc = "by Ccat",
     Icon = 105059922903197,
-    Theme = "Dark",
+    Theme = "黑色",
     Config = {
         Keybind = Enum.KeyCode.LeftControl,
         Size = UDim2.new(0, 500, 0, 400)
@@ -47,7 +47,7 @@ local Tab = Window:Tab({Title = "Main", Icon = "star"}) do
 
     -- Button
     Tab:Button({
-        Title = "Run Action",
+        Title = "飞行",
         Desc = "Click to perform something",
         Callback = function()
             print("Button clicked!")
@@ -56,18 +56,6 @@ local Tab = Window:Tab({Title = "Main", Icon = "star"}) do
                 Desc = "Action performed successfully.",
                 Time = 3
             })
-        end
-    })
-
-    -- Textbox
-    Tab:Textbox({
-        Title = "Input Text",
-        Desc = "Type something here",
-        Placeholder = "Enter value",
-        Value = "",
-        ClearTextOnFocus = false,
-        Callback = function(text)
-            print("Textbox value:", text)
         end
     })
 
@@ -110,11 +98,21 @@ Window:Line()
 
 -- Another Tab Example
 local Extra = Window:Tab({Title = "速度传奇", Icon = "tag"}) do
-    Extra:Section({Title = "About"})
+    Extra:Section({Title = "自动"})
     Extra:Button({
-        Title = "Show Message",
-        Desc = "Display a popup",
+        Title = "自动收集钻石",
+        Desc = "点击开启 点击两次关闭",
         Callback = function()
+        while true do
+local args = {
+	"collectOrb",
+	"Gem",
+	"City"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("rEvents"):WaitForChild("orbEvent"):FireServer(unpack(args))
+wait(0.5)
+end
+
             Window:Notify({
                 Title = "Fluent UI",
                 Desc = "Everything works fine!",
