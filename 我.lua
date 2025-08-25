@@ -109,7 +109,7 @@ end
 Window:Line()
 
 -- Another Tab Example
-local Extra = Window:Tab({Title = "Extra", Icon = "tag"}) do
+local Extra = Window:Tab({Title = "速度传奇", Icon = "tag"}) do
     Extra:Section({Title = "About"})
     Extra:Button({
         Title = "Show Message",
