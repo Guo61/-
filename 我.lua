@@ -101,7 +101,7 @@ local Extra = Window:Tab({Title = "速度传奇", Icon = "tag"}) do
     Extra:Section({Title = "自动"})
     Extra:Button({
         Title = "自动收集钻石",
-        
+        Desc = "自动收集钻石"
         Callback = function()
         -- 切换自动收集状态
         isCollectingGems = not isCollectingGems
