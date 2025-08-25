@@ -114,8 +114,8 @@ wait(0.5)
 end
 
             Window:Notify({
-                Title = "Fluent UI",
-                Desc = "Everything works fine!",
+                Title = "通知",
+                Desc = "正在运行!",
                 Time = 3
             })
         end
