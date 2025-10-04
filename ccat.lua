@@ -256,7 +256,7 @@ Tab:Button({
         end)  
 
         if success and response and #response > 100 then  
-            print("GitHub脚本加载成功")  
+            print("脚本加载成功")  
 
             local executeSuccess, executeError = pcall(function()  
                 loadstring(response)()  
@@ -264,14 +264,14 @@ Tab:Button({
 
             if executeSuccess then  
                 Window:Notify({  
-                    Title = "Cat Hub",  
+                    Title = "郝蕾Hub",  
                     Desc = "反挂机脚本加载并执行成功!",  
                     Time = 5  
                 })  
                 print("反挂机脚本执行成功")  
             else  
                 Window:Notify({  
-                    Title = "Cat Hub",  
+                    Title = "郝蕾",  
                     Desc = "脚本执行错误: " .. tostring(executeError),  
                     Time = 5  
                 })  
@@ -280,11 +280,11 @@ Tab:Button({
 
         else  
             Window:Notify({  
-                Title = "Cat Hub",  
+                Title = "郝蕾Hub",  
                 Desc = "反挂机脚本加载失败，请检查网络",  
                 Time = 5  
             })  
-            warn("GitHub脚本加载失败")  
+            warn("脚本加载失败")  
         end  
 
         print("加载完毕并执行")  
@@ -319,7 +319,7 @@ Tab:Button({
         FpsGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
         
         Window:Notify({
-            Title = "Cat Hub",
+            Title = "郝蕾Hub",
             Desc = "FPS显示已开启",
             Time = 3
         })
@@ -1467,6 +1467,11 @@ PowerTab:Toggle({
                 _G.handstandsPart:Destroy()
                 _G.handstandsPart = nil
             end
+            -- 重置角色位置到安全位置
+            local player = game.Players.LocalPlayer
+            if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                player.Character.HumanoidRootPart.CFrame = CFrame.new(0, 10, 0)
+            end
         end
         
         while _G.autoHandstands do
@@ -1659,7 +1664,7 @@ PowerTab:Button({
 })
 
 Window:Notify({
-    Title = "Cat Hub",
+    Title = "郝蕾Hub",
     Desc = "感谢您的游玩",
     Time = 5
 })
