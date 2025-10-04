@@ -7,7 +7,7 @@ if not success or not Library then
 end
 
 local Window = Library:Window({
-    Title = "Cat Hub",
+    Title = "郝蕾 Hub",
     Desc = "需要时开启反挂机",
     Icon = "skull",
     Theme = "Dark",
@@ -222,7 +222,7 @@ end
 
 local Tab = Window:Tab({Title = "主页", Icon = "crown"})
 
-Tab:Section({Title = "By Ccat\n脚本免费 请勿倒卖"})
+Tab:Section({Title = "By 郝蕾\n脚本免费 请勿倒卖"})
 
 Tab:Button({
     Title = "设备信息",
