@@ -107,113 +107,178 @@ local Tabs = {
 
 Window:SelectTab(1)
 
-Tabs.Info:Section({
+local infoSection1 = Tabs.Info:Section({
     Title = "作者信息"
 })
 
-Tabs.Info:Label("郝蕾脚本")
-Tabs.Info:Label("作者：郝蕾")
-Tabs.Info:Label("师傅是ccat---改版")
-Tabs.Info:Label("作者qq3131827878")
+infoSection1:Paragraph({
+    Title = "郝蕾脚本",
+    Desc = "作者：郝蕾\n师傅是ccat---改版\n作者qq3131827878"
+})
 
-Tabs.Info:Section({
+local infoSection2 = Tabs.Info:Section({
     Title = "你的信息"
 })
 
-Tabs.Info:Label("你的账号:"..player.AccountAge.."世纪")
-Tabs.Info:Label("你的注入器:"..identifyexecutor())
-Tabs.Info:Label("你的用户名:"..game.Players.LocalPlayer.Character.Name)
-Tabs.Info:Label("服务器名称:"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+infoSection2:Paragraph({
+    Title = "账户信息",
+    Desc = "你的账号:"..player.AccountAge.."世纪\n你的注入器:"..identifyexecutor().."\n你的用户名:"..game.Players.LocalPlayer.Character.Name.."\n服务器名称:"..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+})
 
-Tabs.Scripts:Section({
+local scriptsSection = Tabs.Scripts:Section({
     Title = "脚本合集"
 })
 
-Tabs.Scripts:Button("鱼脚本",function()
- loadstring(game:HelpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,115,104,122,46,97,108,47,126,70,105,115,104,83,99,114,105,112,116,78,101,119})end)())))();
-end)
+scriptsSection:Button({
+    Title = "鱼脚本",
+    Callback = function()
+        loadstring(game:HelpGet(utf8.char((function() return table.unpack({104,116,116,112,115,58,47,47,115,104,122,46,97,108,47,126,70,105,115,104,83,99,114,105,112,116,78,101,119})end)())))();
+    end
+})
 
-Tabs.Scripts:Button("皮脚本",function()
- loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()
-end)
+scriptsSection:Button({
+    Title = "皮脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaopi77/xiaopi77/main/QQ1002100032-Roblox-Pi-script.lua"))()
+    end
+})
 
-Tabs.Scripts:Button("星河脚本",function()
- loadstring(game:HttpGet("https://raw.githubusercontent.com/AWDX-DYVB/test/main/%E6%B2%B3%E6%B5%81%E6%97%A0%E5%AF%86%E9%92%A5.lua"))()
-end)
+scriptsSection:Button({
+    Title = "星河脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AWDX-DYVB/test/main/%E6%B2%B3%E6%B5%81%E6%97%A0%E5%AF%86%E9%92%A5.lua"))()
+    end
+})
 
-Tabs.Scripts:Button("静心脚本",function()
- loadstring(game:HttpGet("https://raw.githubusercontent.com/jxdjbx/gggggghjjnbb/main/jdjdd"))()
-end)
+scriptsSection:Button({
+    Title = "静心脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jxdjbx/gggggghjjnbb/main/jdjdd"))()
+    end
+})
 
-Tabs.Scripts:Button("冷脚本",function()
- getgenv().Leng="冷脚本QQ群815883059" loadstring(game:HttpGet("https://raw.githubusercontent.com/odhdshhe/lenglenglenglenglenglenglenglenglenglenglengleng-cold-script-LBT-H/refs/heads/main/LENG-cold-script-LBT-H.txt"))()
-end)
+scriptsSection:Button({
+    Title = "冷脚本",
+    Callback = function()
+        getgenv().Leng="冷脚本QQ群815883059" loadstring(game:HttpGet("https://raw.githubusercontent.com/odhdshhe/lenglenglenglenglenglenglenglenglenglenglengleng-cold-script-LBT-H/refs/heads/main/LENG-cold-script-LBT-H.txt"))()
+    end
+})
 
-Tabs.Scripts:Button("XK脚本",function()
- loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\103\121\99\103\99\104\103\121\102\121\116\100\116\116\114\47\115\104\101\110\113\105\110\47\114\101\102\115\47\104\101\97\100\115\47\109\97\105\110\47\72\69\46\108\117\97\34\41\41\40\41")()
-end)
+scriptsSection:Button({
+    Title = "XK脚本",
+    Callback = function()
+        loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\103\121\99\103\99\104\103\121\102\121\116\100\116\116\114\47\115\104\101\110\113\105\110\47\114\101\102\115\47\104\101\97\100\115\47\109\97\105\110\47\72\69\46\108\117\97\34\41\41\40\41")()
+    end
+})
 
-Tabs.Scripts:Button("也是脚本但不知道名",function()
- loadstring(game:HttpGet("https://pastebin.com/raw/KwARpDxV",true))()
- end)
- 
-Tabs.Scripts:Button("动感星期五",function()
- loadstring(game:HttpGet("https://pastebin.com/raw/KwARpDxV",true))()
- end)
+scriptsSection:Button({
+    Title = "也是脚本但不知道名",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/KwARpDxV",true))()
+    end
+})
 
-Tabs.Universal:Section({
+scriptsSection:Button({
+    Title = "动感星期五",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/KwARpDxV",true))()
+    end
+})
+
+local universalSection = Tabs.Universal:Section({
     Title = "通用"
 })
 
-Tabs.Universal:Button("甩人",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
-end)
-    
-Tabs.Universal:Button("替身",function()
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkrillexMe/SkrillexLoader/main/SkrillexLoadMain')))()
-end)
+universalSection:Button({
+    Title = "甩人",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/zqyDSUWX"))()
+    end
+})
 
-Tabs.Universal:Button("爬墙",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
-end)
+universalSection:Button({
+    Title = "替身",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkrillexMe/SkrillexLoader/main/SkrillexLoadMain')))()
+    end
+})
 
-Tabs.Universal:Button("汉化阿尔宙斯自瞄",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/sgbs/main/%E4%B8%81%E4%B8%81%20%E6%B1%89%E5%8C%96%E8%87%AA%E7%9E%84.txt"))()
-end)
+universalSection:Button({
+    Title = "爬墙",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+    end
+})
 
-Tabs.Universal:Button("工具挂",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/StandAwekening.lua"))()
-end)
+universalSection:Button({
+    Title = "汉化阿尔宙斯自瞄",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/sgbs/main/%E4%B8%81%E4%B8%81%20%E6%B1%89%E5%8C%96%E8%87%AA%E7%9E%84.txt"))()
+    end
+})
 
-Tabs.Universal:Button("甩飞",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/hknvh/main/%E7%94%A9%E9%A3%9E.txt"))()
-end)
+universalSection:Button({
+    Title = "工具挂",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/StandAwekening.lua"))()
+    end
+})
 
-Tabs.Universal:Button("铁拳",function()
-  loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'))()
-end)
+universalSection:Button({
+    Title = "甩飞",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/dingding123hhh/hknvh/main/%E7%94%A9%E9%A3%9E.txt"))()
+    end
+})
 
-Tabs.Universal:Slider('设置重力', 196.2, 196.2, 1000,function(Value)
-        game.Workspace.Gravity = Value
-    end)
-    
-Tabs.Universal:Slider("跳跃高度!", 50, 50, 400, function(Jump)
-  spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.JumpPower = Jump end end)
-end)
+universalSection:Button({
+    Title = "铁拳",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'))()
+    end
+})
 
-Tabs.Universal:Slider("步行速度!", 16, 16, 400, function(Speed)
-  spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed end end)
-end)
+universalSection:Slider({
+    Title = "设置重力",
+    Desc = "调整游戏重力",
+    Value = { Min = 196.2, Max = 1000, Default = 196.2 },
+    Callback = function(val)
+        game.Workspace.Gravity = val
+    end
+})
 
-Tabs.Universal:Toggle("夜视",false,function(Value)
-if Value then
-		    game.Lighting.Ambient = Color3.new(1, 1, 1)
-		else
-		    game.Lighting.Ambient = Color3.new(0, 0, 0)
-		end
-end)
+universalSection:Slider({
+    Title = "跳跃高度",
+    Desc = "调整跳跃高度",
+    Value = { Min = 50, Max = 400, Default = 50 },
+    Callback = function(val)
+        spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.JumpPower = val end end)
+    end
+})
 
-Tabs.Universal:Toggle("自动互动", false, function(state)
+universalSection:Slider({
+    Title = "步行速度",
+    Desc = "调整移动速度",
+    Value = { Min = 16, Max = 400, Default = 16 },
+    Callback = function(val)
+        spawn(function() while task.wait() do game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = val end end)
+    end
+})
+
+universalSection:Toggle({
+    Title = "夜视",
+    Callback = function(Value)
+        if Value then
+            game.Lighting.Ambient = Color3.new(1, 1, 1)
+        else
+            game.Lighting.Ambient = Color3.new(0, 0, 0)
+        end
+    end
+})
+
+universalSection:Toggle({
+    Title = "自动互动",
+    Callback = function(state)
         if state then
             autoInteract = true
             while autoInteract do
@@ -227,138 +292,206 @@ Tabs.Universal:Toggle("自动互动", false, function(state)
         else
             autoInteract = false
         end
-    end)
+    end
+})
 
-Tabs.Doors:Section({
+local doorsSection = Tabs.Doors:Section({
     Title = "doors"
 })
 
-Tabs.Doors:Button("最强汉化",function()
-loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
-end)
+doorsSection:Button({
+    Title = "最强汉化",
+    Callback = function()
+        loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\54\53\84\119\84\56\106\97"))()
+    end
+})
 
-Tabs.Ninja:Section({
+local ninjaSection = Tabs.Ninja:Section({
     Title = "忍者传奇"
 })
 
-Tabs.Ninja:Button("忍者传奇1",function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Zyb150933/zyb/main/123'))()
-end)
+ninjaSection:Button({
+    Title = "忍者传奇1",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Zyb150933/zyb/main/123'))()
+    end
+})
 
-Tabs.Ninja:Button("叶脚本",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/5TNsz9mj"))()
-end)
+ninjaSection:Button({
+    Title = "叶脚本",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/5TNsz9mj"))()
+    end
+})
 
-Tabs.Ninja:Button("传送",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/UzaUDSPK"))()
-end)
+ninjaSection:Button({
+    Title = "传送",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/UzaUDSPK"))()
+    end
+})
 
-Tabs.Prison:Section({
+local prisonSection = Tabs.Prison:Section({
     Title = "越狱"
 })
 
-Tabs.Prison:Button("越狱",function()
-loadstring(game:GetObjects("rbxassetid://3762448307")[1].Source)()
-end)
+prisonSection:Button({
+    Title = "越狱",
+    Callback = function()
+        loadstring(game:GetObjects("rbxassetid://3762448307")[1].Source)()
+    end
+})
 
-Tabs.Speed:Section({
+local speedSection = Tabs.Speed:Section({
     Title = "极速传奇"
 })
 
-Tabs.Speed:Button("1",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TtmScripter/GoodScript/main/LegendOfSpeed(Chinese)"))()
-end)
+speedSection:Button({
+    Title = "1",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TtmScripter/GoodScript/main/LegendOfSpeed(Chinese)"))()
+    end
+})
 
-Tabs.Speed:Button("2",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TtmScripter/Legend-of-Speed-Auto-/main/GetPet"))()end)
+speedSection:Button({
+    Title = "2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TtmScripter/Legend-of-Speed-Auto-/main/GetPet"))()
+    end
+})
 
-Tabs.Pressure:Section({
+local pressureSection = Tabs.Pressure:Section({
     Title = "『压力』"
 })
 
-Tabs.Pressure:Button("压力1",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/Ej3U4LbA"))()
-end)
+pressureSection:Button({
+    Title = "压力1",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/Ej3U4LbA"))()
+    end
+})
 
-Tabs.Pressure:Button("压力2",function()
-loadstring(game:HttpGet(('https://github.com/DocYogurt/Main/raw/main/Scripts/Pressure')))()
-end)
+pressureSection:Button({
+    Title = "压力2",
+    Callback = function()
+        loadstring(game:HttpGet(('https://github.com/DocYogurt/Main/raw/main/Scripts/Pressure')))()
+    end
+})
 
-Tabs.Dusty:Section({
+local dustySection = Tabs.Dusty:Section({
     Title = "『尘土飞扬的旅行』"
 })
 
-Tabs.Dusty:Button("尘土飞扬的旅行1",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AbdouGG/dustytripv1/main/beta"))()
-end)
+dustySection:Button({
+    Title = "尘土飞扬的旅行1",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AbdouGG/dustytripv1/main/beta"))()
+    end
+})
 
-Tabs.Dusty:Button("尘土飞扬的旅行2",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
-end)
+dustySection:Button({
+    Title = "尘土飞扬的旅行2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
+    end
+})
 
-Tabs.DeathBall:Section({
+local deathBallSection = Tabs.DeathBall:Section({
     Title = "『死亡球』"
 })
 
-Tabs.DeathBall:Button("死亡球1",function()
-loadstring(game:HttpGet("https://github.com/Hosvile/InfiniX/releases/latest/download/main.lua",true))()
-end)
+deathBallSection:Button({
+    Title = "死亡球1",
+    Callback = function()
+        loadstring(game:HttpGet("https://github.com/Hosvile/InfiniX/releases/latest/download/main.lua",true))()
+    end
+})
 
-Tabs.CarDealer:Section({
+local carDealerSection = Tabs.CarDealer:Section({
     Title = "『汽车经销大亨』"
 })
 
-Tabs.CarDealer:Button("刷星星",function()
-loadstring(game:HttpGet("https://scriptblox.com/raw/LIMITED!-Car-Dealership-Tycoon-Moon-Team-16181"))()
-end)
+carDealerSection:Button({
+    Title = "刷星星",
+    Callback = function()
+        loadstring(game:HttpGet("https://scriptblox.com/raw/LIMITED!-Car-Dealership-Tycoon-Moon-Team-16181"))()
+    end
+})
 
-Tabs.CarDealer:Button("汽车经销大亨1",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/IExpIoit/Script/main/Car%20Dealership%20Tycoon.lua"))()
-end)
+carDealerSection:Button({
+    Title = "汽车经销大亨1",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/IExpIoit/Script/main/Car%20Dealership%20Tycoon.lua"))()
+    end
+})
 
-Tabs.Lumber:Section({
+local lumberSection = Tabs.Lumber:Section({
     Title = "『伐木大亨』"
 })
 
-Tabs.Lumber:Button("伐木大亨1",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/UWU/main/LuaWare.lua", true))()
-end)
+lumberSection:Button({
+    Title = "伐木大亨1",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XiaoYunCN/UWU/main/LuaWare.lua", true))()
+    end
+})
 
-Tabs.AX:Section({
+local axSection = Tabs.AX:Section({
     Title = "『 AX』"
 })
 
-Tabs.AX:Button("ax所有功能内有ohio",function()
-loadstring(game:HttpGet("https://raw.gitcode.com/Xingtaiduan/Scripts/raw/main/Loader.lua"))()
-end)
+axSection:Button({
+    Title = "ax所有功能内有ohio",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.gitcode.com/Xingtaiduan/Scripts/raw/main/Loader.lua"))()
+    end
+})
 
-Tabs.Chinese:Section({
+local chineseSection = Tabs.Chinese:Section({
     Title = "『 市面上大部分汉化』"
 })
 
-Tabs.Chinese:Button("99虚空",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/99%E5%A4%9C%E8%99%9A%E7%A9%BA.txt"))()
-end)
+chineseSection:Button({
+    Title = "99虚空",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/99%E5%A4%9C%E8%99%9A%E7%A9%BA.txt"))()
+    end
+})
 
-Tabs.Chinese:Button("死铁轨",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E6%AD%BB%E9%93%81%E8%BD%A8.lua"))()
-end)
+chineseSection:Button({
+    Title = "死铁轨",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E6%AD%BB%E9%93%81%E8%BD%A8.lua"))()
+    end
+})
 
-Tabs.Chinese:Button("墨水游戏",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E6%B1%89%E5%8C%96%E5%A2%A8%E6%B0%B4Ringta.txt"))()
-end)
+chineseSection:Button({
+    Title = "墨水游戏",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E6%B1%89%E5%8C%96%E5%A2%A8%E6%B0%B4Ringta.txt"))()
+    end
+})
 
-Tabs.Chinese:Button("活了7天",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E4%B8%83%E6%97%A5%E7%94%9F%E6%88%90kkk.txt"))()
-end)
+chineseSection:Button({
+    Title = "活了7天",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E4%B8%83%E6%97%A5%E7%94%9F%E6%88%90kkk.txt"))()
+    end
+})
 
-Tabs.Chinese:Button("汉化大合集",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/VelocityX.lua"))()
-end)
+chineseSection:Button({
+    Title = "汉化大合集",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/VelocityX.lua"))()
+    end
+})
 
-Tabs.Chinese:Button("偷走脑红",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/hdjsjjdgrhj/script-hub/refs/heads/main/偷走脑红"))()
-end)
+chineseSection:Button({
+    Title = "偷走脑红",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/hdjsjjdgrhj/script-hub/refs/heads/main/偷走脑红"))()
+    end
+})
 
 WindUI:Notify({
     Title = "郝蕾脚本已加载",
