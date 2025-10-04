@@ -102,7 +102,7 @@ local Tabs = {
     CarDealer = Window:Tab({ Title = "『汽车经销大亨』", Icon = "gamepad" }),
     Lumber = Window:Tab({ Title = "『伐木大亨』", Icon = "gamepad" }),
     AX = Window:Tab({ Title = "『AX』", Icon = "gamepad" }),
-    Chinese = Window:Tab({ Title = "『市面上大部分汉化』", Icon = "gamepad" }),
+    Chinese = Window:Tab({ Title = "『郝蕾脚本大全』", Icon = "gamepad" }),
 }
 
 Window:SelectTab(1)
@@ -448,7 +448,7 @@ axSection:Button({
 })
 
 local chineseSection = Tabs.Chinese:Section({
-    Title = "『 市面上大部分汉化』"
+    Title = "『 郝蕾汉化加大部分资源 』"
 })
 
 chineseSection:Button({
@@ -480,9 +480,9 @@ chineseSection:Button({
 })
 
 chineseSection:Button({
-    Title = "汉化大合集",
+    Title = "BF",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/VelocityX.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/bf.txt"))()
     end
 })
 
@@ -493,8 +493,71 @@ chineseSection:Button({
     end
 })
 
+chineseSection:Button({
+    Title = "战争大亨",
+    Callback = function()
+    loadstring(game:HttpGet("https://pastefy.app/hDfjNmLP/raw"))()
+    end
+})
+
+chineseSection:Button({
+    Title = "DOORs",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/VelocityX.lua"))()
+    end
+})
+
+chineseSection:Button({
+    Title = "跳跃对决",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/%E8%B7%B3%E8%B7%83%E5%AF%B9%E5%86%B3.txt"))()
+    end
+})
+
+chineseSection:Button({
+    Title = "刀刃球",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/ArgonHubX.lua"))()
+end
+})
+
+chineseSection:Button({
+    Title = "造船寻宝",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/zcxb.lua"))()
+    end
+    })
+    
+    chineseSection:Button({
+    Title = "自然灾害",
+    Callback = function()
+    loadstring(game:HttpGet'https://raw.githubusercontent.com/RunDTM/ZeeroxHub/main/Loader.lua')()
+    end
+    })
+    
+    chineseSection:Button({
+    Title = "最强战场隐身",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ke9460394-dot/ugik/refs/heads/main/VexonHub%E6%B1%89%E5%8C%96.txt"))()
+end
+})
+
+chineseSection:Button({
+    Title = "最强战场无视平a",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/10tempest01/tempest-hub/refs/heads/main/Launcher.lua"))()
+end
+})
+
+chineseSection:Button({
+    Title = "最强战场火车头",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skibiditoiletfan2007/ATrainSounds/refs/heads/main/ATrain.lua"))()
+end
+})
+
 WindUI:Notify({
     Title = "郝蕾脚本已加载",
-    Content = "欢迎使用 v2.0 - WindUI版本",
+    Content = "欢迎使用 v2.3 - WindUI版本",
     Duration = 5
 })
