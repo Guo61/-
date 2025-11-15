@@ -1,0 +1,27 @@
+{
+  "bans": [
+    {
+      "id": "ban_001",
+      "userId": "user_002",
+      "userEmail": "banned@example.com",
+      "reason": "发布违规内容",
+      "bannedBy": "admin_001",
+      "startTime": "2024-01-18T14:20:00Z",
+      "endTime": "2024-02-18T14:20:00Z",
+      "permanent": false,
+      "active": true
+    },
+    {
+      "id": "ban_002",
+      "userId": "user_005",
+      "userEmail": "spammer@example.com",
+      "reason": "垃圾信息发送",
+      "bannedBy": "author_001",
+      "startTime": "2024-01-15T09:45:00Z",
+      "endTime": null,
+      "permanent": true,
+      "active": true
+    }
+  ],
+  "lastUpdated": "2024-01-20T18:35:00Z"
+}
