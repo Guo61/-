@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "user_001",
+      "email": "user@example.com",
+      "password": "hashed_password_123",
+      "name": "示例用户",
+      "avatar": "U",
+      "role": "user",
+      "createdAt": "2024-01-15T10:30:00Z",
+      "lastLogin": "2024-01-20T14:25:00Z",
+      "status": "active",
+      "title": "",
+      "customBackground": ""
+    },
+    {
+      "id": "admin_001",
+      "email": "admin@example.com",
+      "password": "hashed_admin_password",
+      "name": "管理员",
+      "avatar": "A",
+      "role": "admin",
+      "createdAt": "2024-01-10T09:15:00Z",
+      "lastLogin": "2024-01-20T16:45:00Z",
+      "status": "active",
+      "title": "系统管理员",
+      "customBackground": "background_admin.jpg"
+    },
+    {
+      "id": "author_001",
+      "email": "author@example.com",
+      "password": "hashed_author_password",
+      "name": "作者",
+      "avatar": "C",
+      "role": "author",
+      "createdAt": "2024-01-05T08:00:00Z",
+      "lastLogin": "2024-01-20T18:30:00Z",
+      "status": "active",
+      "title": "创始人",
+      "customBackground": "background_author.jpg"
+    }
+  ],
+  "lastUpdated": "2024-01-20T18:35:00Z"
+}
