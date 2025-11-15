@@ -1,0 +1,25 @@
+{
+  "mutes": [
+    {
+      "id": "mute_001",
+      "userId": "user_003",
+      "userEmail": "noisy@example.com",
+      "reason": "频繁刷屏",
+      "mutedBy": "admin_001",
+      "startTime": "2024-01-20T16:30:00Z",
+      "endTime": "2024-01-21T16:30:00Z",
+      "active": true
+    },
+    {
+      "id": "mute_002",
+      "userId": "user_007",
+      "userEmail": "arguer@example.com",
+      "reason": "恶意争论",
+      "mutedBy": "author_001",
+      "startTime": "2024-01-19T11:15:00Z",
+      "endTime": "2024-01-22T11:15:00Z",
+      "active": true
+    }
+  ],
+  "lastUpdated": "2024-01-20T18:35:00Z"
+}
