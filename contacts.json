@@ -1,0 +1,41 @@
+{
+  "contacts": {
+    "user_001": [
+      {
+        "userId": "admin_001",
+        "addedAt": "2024-01-15T11:20:00Z",
+        "noteName": "技术支持"
+      },
+      {
+        "userId": "author_001",
+        "addedAt": "2024-01-16T14:30:00Z",
+        "noteName": "开发者"
+      }
+    ],
+    "admin_001": [
+      {
+        "userId": "user_001",
+        "addedAt": "2024-01-15T11:20:00Z",
+        "noteName": "示例用户"
+      },
+      {
+        "userId": "author_001",
+        "addedAt": "2024-01-10T09:15:00Z",
+        "noteName": "创始人"
+      }
+    ],
+    "author_001": [
+      {
+        "userId": "user_001",
+        "addedAt": "2024-01-16T14:30:00Z",
+        "noteName": "测试用户"
+      },
+      {
+        "userId": "admin_001",
+        "addedAt": "2024-01-10T09:15:00Z",
+        "noteName": "管理员"
+      }
+    ]
+  },
+  "lastUpdated": "2024-01-20T18:35:00Z"
+}
