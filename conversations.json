@@ -1,0 +1,55 @@
+{
+  "conversations": [
+    {
+      "id": "conv_001",
+      "type": "private",
+      "participants": ["user_001", "admin_001"],
+      "lastMessage": {
+        "id": "msg_015",
+        "content": "好的，我会尽快处理",
+        "senderId": "admin_001",
+        "timestamp": "2024-01-20T18:25:00Z"
+      },
+      "unreadCount": {
+        "user_001": 0,
+        "admin_001": 1
+      },
+      "createdAt": "2024-01-15T11:20:00Z"
+    },
+    {
+      "id": "conv_002",
+      "type": "private",
+      "participants": ["user_001", "author_001"],
+      "lastMessage": {
+        "id": "msg_023",
+        "content": "新功能已经上线了",
+        "senderId": "author_001",
+        "timestamp": "2024-01-20T17:45:00Z"
+      },
+      "unreadCount": {
+        "user_001": 2,
+        "author_001": 0
+      },
+      "createdAt": "2024-01-16T14:30:00Z"
+    },
+    {
+      "id": "conv_003",
+      "type": "group",
+      "name": "开发讨论组",
+      "participants": ["author_001", "admin_001", "user_001"],
+      "lastMessage": {
+        "id": "msg_042",
+        "content": "下个版本的计划是什么？",
+        "senderId": "user_001",
+        "timestamp": "2024-01-20T18:15:00Z"
+      },
+      "unreadCount": {
+        "author_001": 0,
+        "admin_001": 1,
+        "user_001": 0
+      },
+      "createdAt": "2024-01-18T10:00:00Z"
+    }
+  ],
+  "lastUpdated": "2024-01-20T18:35:00Z"
+}
