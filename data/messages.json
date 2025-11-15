@@ -17,7 +17,16 @@
       "readBy": [
         "user_1763199730570_k3brkuls6"
       ]
+    },
+    {
+      "id": "msg_1763201009351_3jyecv9jh",
+      "senderId": "user_1763199730570_k3brkuls6",
+      "content": "Hello",
+      "timestamp": "2025-11-15T10:03:29.351Z",
+      "readBy": [
+        "user_1763199730570_k3brkuls6"
+      ]
     }
   ],
-  "lastUpdated": "2025-11-15T10:00:04.831Z"
+  "lastUpdated": "2025-11-15T10:03:29.351Z"
 }
