@@ -35,7 +35,16 @@
       "readBy": [
         "user_1763203043068_jb8ur6izb"
       ]
+    },
+    {
+      "id": "msg_1763203126210_9jyggbqaj",
+      "senderId": "user_1763203121964_l1nsok5hd",
+      "content": "1",
+      "timestamp": "2025-11-15T10:38:46.210Z",
+      "readBy": [
+        "user_1763203121964_l1nsok5hd"
+      ]
     }
   ],
-  "lastUpdated": "2025-11-15T10:37:26.553Z"
+  "lastUpdated": "2025-11-15T10:38:46.210Z"
 }
