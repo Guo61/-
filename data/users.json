@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "user_1763199730570_k3brkuls6",
+      "email": "gg1457o@qq.com",
+      "password": "1008624242",
+      "name": "gg1457o",
+      "avatar": "G",
+      "role": "user",
+      "createdAt": "2025-11-15T09:42:10.570Z",
+      "lastLogin": "2025-11-15T09:42:10.574Z",
+      "status": "active",
+      "title": "",
+      "customBackground": ""
+    }
+  ],
+  "lastUpdated": "2025-11-15T09:42:10.575Z"
+}
